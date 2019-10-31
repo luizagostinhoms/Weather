@@ -19,7 +19,7 @@
 .div-temp{
     text-align: center;
     margin: 3%;
-    font-size: 50px;
+    font-size: 90px;
     align-content: center; 
     margin: 10%;
 }
@@ -38,10 +38,16 @@
 .label-temp-color-fine{
     color: #ff9632;
 }
-
 .div-other-infos{
     text-align: center;
-    margin: 5%;
+    background-color: #f1f1f1;
+    opacity: 50%;
+}
+
+.div-infos-weather{
+    text-align: center;
+    width: 252px;
+    height: 45px;
 }
 
 .div-humidity{
@@ -76,9 +82,7 @@
 
 .div-update{
     text-align: center;
-    margin: 10%;
-    margin-top: 40%;
-}
+ }
 
 .label-update{
     color: #b4b4b4;

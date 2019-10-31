@@ -7,31 +7,32 @@
         <label [ngClass]="{
             'label-temp-color-cold': city.isCold(),
             'label-temp-color-fine': city.isFine(),
-            'label-temp-color-hot': city.isHot()}"> {{city.temperature}}º </label>
+            'label-temp-color-hot': city.isHot()}"> {{city.temperature | number:'1.0-0'}}° </label>
     </div>
     
-
     <div class="div-other-infos">
-        <div class="div-humidity">
-            <div>
-                <label class="label-humidity">HUMIDITY</label>
+        
+        <div class="div-infos-weather">
+            <div class="div-humidity">
+                <div>
+                    <label class="label-humidity">HUMIDITY</label>
+                </div>
+                <div>
+                    <label class="label-humidity-value">{{city.humidity}}%</label>
+                </div>
             </div>
-            <div>
-                <label class="label-humidity-value">{{city.humidity}}%</label>
-            </div>
+            <div class="div-pressure">
+                <div>
+                    <label class="label-pressure">PRESSURE</label>
+                </div>
+                <div>
+                    <label class="label-pressure-value">{{city.pressure}}hPa</label>
+                </div>
+            </div> 
         </div>
-        <div class="div-pressure">
-            <div>
-                <label class="label-pressure">PRESSURE</label>
-            </div>
-            <div>
-                <label class="label-pressure-value">{{city.pressure}}hPa</label>
-            </div>
-        </div> 
+        
+        <div class="div-update">
+                <label class="label-update">Update at {{city.dateUpdate | date:'mediumTime' }}</label>
+        </div>
     </div>
-
-    <div class="div-update">
-            <label class="label-update">Update at {{city.dateUpdate | date:'mediumTime' }}</label>
-    </div>
-    
 <div>

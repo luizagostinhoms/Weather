@@ -6,6 +6,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ConfigService } from '@ngx-config/core';
 import { CityRequestWeather } from './model/cityrequestweather';
 import { MapperResultWeather } from './model/mapperweather';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-weather',
@@ -27,8 +28,8 @@ export class WeatherComponent implements OnInit {
   }
 
   intervalNextUdpate() {
-    const interval = this.config.getSettings('intervalApi');
-    const interlvaNumber = Number(interval); //10 min.
+    const intervaln = this.config.getSettings('intervalApi');
+    const interlvaNumber = Number(intervaln); //10 min.
 
     interval(interlvaNumber).subscribe(x => { //interval for next update
       this.getInfoWeatherService(this.cityRquest.cityName, this.cityRquest.countryName); 
