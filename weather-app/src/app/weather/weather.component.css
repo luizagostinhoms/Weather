@@ -4,9 +4,13 @@
     box-shadow: 0 2px 2px rgba(51,51,51,0.10);
 }
 
+.divider-name{
+    border: 1px solid #ebebeb;    
+}
+
 .div-city-name {
     text-align: center;
-    margin: 3%;
+    margin: 5%;
 }
 
 .label-city-name {
