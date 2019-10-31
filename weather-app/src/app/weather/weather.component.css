@@ -4,15 +4,18 @@
     border: 1px solid; 
     font-family: Helvetica;
 }
+
 .div-city-name {
     text-align: center;
     margin: 3%;
 }
+
 .label-city-name {
     color: #737c84;
     font-size: 19px;
     align-content: center;  
 }
+
 .div-temp{
     text-align: center;
     margin: 3%;
@@ -20,32 +23,41 @@
     align-content: center; 
     margin: 10%;
 }
+
 .label-temp-color-cold{
     color: #69a3ff;
 }
+
 .label-temp-color-fine{
     color: #ff9632;
 }
+
 .label-temp-color-hot{
     color: #ed1946;
 }
 .label-temp-color-fine{
     color: #ff9632;
 }
+
 .div-other-infos{
     text-align: center;
 }
+
 .div-humidity{
     float: left;
+    margin-left: 10%;
 }
+
 .div-pressure{
     float: right;
+    margin-right: 10%;
 }
 
 .label-humidity{
     color: #b4b4b4;
     font-size: 12px;
 }
+
 .label-humidity-value{
     color: #737c84;
     font-size: 13px;
@@ -55,7 +67,17 @@
     color: #b4b4b4;
     font-size: 12px;
 }
+
 .label-pressure-value{
     color: #737c84;
     font-size: 13px;
+}
+
+.div-update{
+    align-content: center;
+}
+
+.label-update{
+    color: #b4b4b4;
+    font-size: 10px;
 }
