@@ -1,4 +1,5 @@
 {
     "apiOpenweathermapEndpoint": "http://api.openweathermap.org/data/2.5/weather",
-    "apiKey":"5657c7d86eb479ea236277dd3a2926df"
+    "apiKey":"5657c7d86eb479ea236277dd3a2926df",
+    "intervalApi": 600000
 }

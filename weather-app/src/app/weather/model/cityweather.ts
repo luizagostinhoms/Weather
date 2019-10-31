@@ -14,6 +14,15 @@ export class CityWeather {
     }
   }
 
+  export class CityRequestWeather {
+    cityName: string;
+    countryName: string;
+    constructor(cityName: string, countryName: string) {
+      this.cityName = cityName;
+      this.countryName = countryName;
+    }
+  }
+
   export class MapperResultWeather {
 
     mapperResultWahter(responseWeather: ResponseWeather) : CityWeather {
