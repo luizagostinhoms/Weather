@@ -10,7 +10,28 @@
             'label-temp-color-hot': city.isHot()}"> {{city.temperature}}º </label>
     </div>
     
-    {{city.humidity}}
-    {{city.pressure}}
-    {{city.dateUpdate}}
+    <div class="div-other-infos">
+        <div class="div-humidity">
+            <div>
+                <label class="label-humidity">HUMIDITY</label>
+            </div>
+            <div>
+                <label class="label-humidity-value">{{city.humidity}}%</label>
+            </div>
+        </div>
+        <div class="div-pressure">
+            <div>
+                <label class="label-pressure">PRESSURE</label>
+            </div>
+            <div>
+                <label class="label-pressure-value">{{city.pressure}}hPa</label>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div>
+        <!-- <label>{{city.dateUpdate}}</label> -->
+    </div>
+    
 <div>

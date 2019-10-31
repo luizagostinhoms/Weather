@@ -29,3 +29,33 @@
 .label-temp-color-hot{
     color: #ed1946;
 }
+.label-temp-color-fine{
+    color: #ff9632;
+}
+.div-other-infos{
+    text-align: center;
+}
+.div-humidity{
+    float: left;
+}
+.div-pressure{
+    float: right;
+}
+
+.label-humidity{
+    color: #b4b4b4;
+    font-size: 12px;
+}
+.label-humidity-value{
+    color: #737c84;
+    font-size: 13px;
+}
+
+.label-pressure{
+    color: #b4b4b4;
+    font-size: 12px;
+}
+.label-pressure-value{
+    color: #737c84;
+    font-size: 13px;
+}
