@@ -41,6 +41,7 @@
 
 .div-other-infos{
     text-align: center;
+    margin: 5%;
 }
 
 .div-humidity{
@@ -74,7 +75,9 @@
 }
 
 .div-update{
-    align-content: center;
+    text-align: center;
+    margin: 10%;
+    margin-top: 40%;
 }
 
 .label-update{
