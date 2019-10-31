@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { OpenWeatherMapService } from './services/openweathermap.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { CityWeather } from './weather/model/cityweather';
+import { CityWeather, MapperResultWeather } from './weather/model/cityweather';
 import { ResponseWeather } from './services/model/responseweather';
 
 @Component({
@@ -12,19 +12,13 @@ import { ResponseWeather } from './services/model/responseweather';
 export class AppComponent {
   title = 'weather-app';
   
-  city: CityWeather;
+  cities: Array<CityWeather> = new Array<CityWeather>();
 
   constructor(private openWeatherMapService: OpenWeatherMapService){
-    
-    this.getInfoWeatherServce("London", "uk");
+    this.getInfoWeatherServce("Nuuk", "GL");
+    this.getInfoWeatherServce("Urubici", "BR");
+    this.getInfoWeatherServce("Nairobi", "KE");
 
-    this.city = new CityWeather();
-    this.city.cityName = "São Paulo";
-    this.city.countryName = "BR";
-    this.city.dateUpdate = new Date;
-    this.city.humidity = 55;
-    this.city.pressure = 60;
-    this.city.temperature = 30;
   }
 
   getInfoWeatherServce(city: string, countryCode: string){
@@ -33,13 +27,13 @@ export class AppComponent {
         this.treatResult(data as ResponseWeather);
       },
       (err: HttpErrorResponse) => {
-        console.debug(err);
       }
     );
   }
 
-  treatResult(data: ResponseWeather){
-    console.debug(data);
+  treatResult(response: ResponseWeather){
+    let mapper: MapperResultWeather = new MapperResultWeather();
+    this.cities.push(mapper.mapperResultWahter(response));
   }
 
 }
