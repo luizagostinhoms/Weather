@@ -1,6 +1,15 @@
-<div>
-    {{city.getCompositName()}}
-    {{city.temperature}}
+<div class="square-weather">
+    <div class="div-city-name">
+        <label class="label-city-name"> {{city.getCompositName()}} </label>
+    </div>
+        
+    <div class="div-temp">
+        <label [ngClass]="{
+            'label-temp-color-cold': city.isCold(),
+            'label-temp-color-fine': city.isFine(),
+            'label-temp-color-hot': city.isHot()}"> {{city.temperature}}º </label>
+    </div>
+    
     {{city.humidity}}
     {{city.pressure}}
     {{city.dateUpdate}}

@@ -1,9 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CityWeather, MapperResultWeather, CityRequestWeather } from './model/cityweather';
+import { CityWeather } from './model/cityweather';
 import { OpenWeatherMapService } from '../services/openweathermap.service';
 import { ResponseWeather } from '../services/model/responseweather';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ConfigService } from '@ngx-config/core';
+import { CityRequestWeather } from './model/cityrequestweather';
+import { MapperResultWeather } from './model/mapperweather';
 
 @Component({
   selector: 'app-weather',

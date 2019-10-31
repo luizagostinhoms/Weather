@@ -15,8 +15,9 @@ export class OpenWeatherMapService {
             
             let endPoint = this.config.getSettings('apiOpenweathermapEndpoint');
             let apiKey = this.config.getSettings('apiKey');
+            let uinits = this.config.getSettings('units');
             
-            this.httpClient.get(endPoint + "?q=" + city + "," + countryCode + "&APPID="+apiKey).subscribe(
+            this.httpClient.get(endPoint + "?q=" + city + "," + countryCode +"&units=" + uinits + "&APPID=" + apiKey).subscribe(
                     res => {
                         const info: any = res;
                         observer.next(info);

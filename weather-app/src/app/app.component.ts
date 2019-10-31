@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CityRequestWeather } from './weather/model/cityweather';
+import { CityRequestWeather } from './weather/model/cityrequestweather';
+
 
 @Component({
   selector: 'app-root',

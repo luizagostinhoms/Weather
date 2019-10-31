@@ -1,5 +1,3 @@
-import { ResponseWeather } from 'src/app/services/model/responseweather';
-
 export class CityWeather {
 
     cityName: string;
@@ -12,32 +10,19 @@ export class CityWeather {
     getCompositName(){
       return this.cityName + ", " + this.countryName;
     }
-  }
 
-  export class CityRequestWeather {
-    cityName: string;
-    countryName: string;
-    constructor(cityName: string, countryName: string) {
-      this.cityName = cityName;
-      this.countryName = countryName;
+    isCold():boolean { 
+      let cold: boolean = this.temperature < 5;
+      return cold;
+    }
+    
+    isFine():boolean {
+      let cold: boolean = this.temperature >= 5 && this.temperature <= 25;
+      return cold;
+
+    }
+    isHot():boolean {
+      let cold: boolean = this.temperature > 25;
+      return cold;
     }
   }
-
-  export class MapperResultWeather {
-
-    mapperResultWahter(responseWeather: ResponseWeather) : CityWeather {
-      
-      let cityWeather: CityWeather = new CityWeather();
-      cityWeather.cityName = responseWeather.name;
-      cityWeather.countryName = responseWeather.sys.country;
-      cityWeather.temperature = responseWeather.main.temp;
-      cityWeather.humidity = responseWeather.main.humidity;
-      cityWeather.pressure = responseWeather.main.pressure;
-      cityWeather.dateUpdate = new Date();
-
-      return cityWeather;
-    }
-
-  }
-  
-  
