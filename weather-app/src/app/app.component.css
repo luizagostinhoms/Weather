@@ -5,4 +5,9 @@
 .div-back-app {
     background-color: #f1f1f1;
     overflow: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
 }
