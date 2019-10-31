@@ -1,6 +1,7 @@
 .square-weather{
     width:252px;
     font-family: Helvetica;
+    background-color: white;
     box-shadow: 0 2px 2px rgba(51,51,51,0.10);
 }
 
