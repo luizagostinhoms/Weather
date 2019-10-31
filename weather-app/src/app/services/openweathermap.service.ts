@@ -13,8 +13,10 @@ export class OpenWeatherMapService {
     public getWeatherCity(city: string, countryCode: string) {
         return new Observable(observer => {
             
-            let endPoint = this.config.getSettings('apiOpenweathermapEndpoint');    
-            this.httpClient.get(endPoint+"?q="+city+ "," +countryCode).subscribe(
+            let endPoint = this.config.getSettings('apiOpenweathermapEndpoint');
+            let apiKey = this.config.getSettings('apiKey');
+            
+            this.httpClient.get(endPoint + "?q=" + city + "," + countryCode + "&APPID="+apiKey).subscribe(
                     res => {
                         const info: any = res;
                         observer.next(info);

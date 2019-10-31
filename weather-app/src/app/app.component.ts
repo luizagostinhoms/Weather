@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { CityWeather } from './weather/weather.component';
 import { OpenWeatherMapService } from './services/openweathermap.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { CityWeather } from './weather/model/cityweather';
+import { ResponseWeather } from './services/model/responseweather';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,7 @@ export class AppComponent {
   getInfoWeatherServce(city: string, countryCode: string){
     this.openWeatherMapService.getWeatherCity(city, countryCode).subscribe(
       data => {
-        this.treatResult(data);
+        this.treatResult(data as ResponseWeather);
       },
       (err: HttpErrorResponse) => {
         console.debug(err);
@@ -37,7 +38,7 @@ export class AppComponent {
     );
   }
 
-  treatResult(data){
+  treatResult(data: ResponseWeather){
     console.debug(data);
   }
 
