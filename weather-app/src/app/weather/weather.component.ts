@@ -52,13 +52,14 @@ export class WeatherComponent implements OnInit {
 
     this.openWeatherMapService.getWeatherCity(cityName, countryName).subscribe(
       data => {
-        this.showLoader = false;
-        this.showError = false;
-        this.treatResult(data as ResponseWeather);
-      },
-      (err: HttpErrorResponse) => {
-        this.showLoader = false;
-        this.showError = true;
+        if(data instanceof HttpErrorResponse){
+          this.showLoader = false;
+          this.showError = true;
+        } else {
+          this.showLoader = false;
+          this.showError = false;
+          this.treatResult(data as ResponseWeather);
+        } 
       }
     );
   }
