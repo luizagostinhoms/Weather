@@ -105,9 +105,24 @@
     height: 120px;
     margin: 10%;
 }
-.label-message-error {
-    color: #ed1946;
-    font-size: 14px;
+.error-try-again {
     text-align: center;
     align-content: center; 
+    height: 120px;
+    margin: 10%;
+}
+.btn-try-again{
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #737c84;
+    width: 100px;
+    height: 40px;
+}
+.label-message-error {
+    color: #ed1946;
+    font-size: 17px;
+}
+.label-try-again{
+    color: #737c84;
+    font-size: 17px
 }
