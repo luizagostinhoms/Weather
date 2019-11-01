@@ -121,6 +121,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .label-message-error {
     color: #ed1946;
@@ -128,7 +129,8 @@
 }
 .label-try-again{
     color: #737c84;
-    font-size: 17px
+    font-size: 17px;
+    cursor: pointer;
 }
 .div-message-error{
     margin: 7%;
