@@ -3,8 +3,13 @@
     <img class="top-bar-logo" src="assets/logo.svg">
 </div>
 
-<div class="div-back-app">
-    <div *ngFor="let cityRquest of cities" class="div-app-weahter">
+<div [ngClass]="{'div-back-app-pc': !isMobile,
+                  'div-back-app-mobile': isMobile}">
+
+    <div *ngFor="let cityRquest of cities" [ngClass]="{
+          'div-app-weahter-pc': !isMobile,
+          'div-app-weahter-mobile': isMobile}">
+
       <app-weather [cityRquest]="cityRquest"></app-weather>
     </div>
 </div>

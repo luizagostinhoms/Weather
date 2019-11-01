@@ -12,7 +12,7 @@
     height: 35px;
     width: 200px;
 }
-.div-back-app {
+.div-back-app-pc {
     background-color: #f1f1f1;
     display: flex;
     align-items: center;
@@ -21,7 +21,20 @@
     width: 99%;
     position: absolute;
 }
-.div-app-weahter{
+.div-back-app-mobile {
+    background-color: #f1f1f1;
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    height: 96%;
+    width: 98%;
+    position: absolute;
+    margin: 1%;
+}
+.div-app-weahter-pc{
     display: inline-block;
+    margin: 1%;
+}
+.div-app-weahter-mobile{
     margin: 1%;
 }
