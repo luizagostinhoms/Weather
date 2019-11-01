@@ -1,27 +1,24 @@
 # WeatherApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.15.
+Esse projeto voi desenvolvido em angular na versão 8.3.15.
 
-## Development server
+É necessário ter o node.js instalado para rodar a aplicação https://nodejs.org/en/, deve ser na versão 10.9 ou superior. recomendo ter instaldo a útlima versão LTS 12.13.0 LTS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Executando a aplicacao
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para executar usar os seguintes comandos: 
 
-## Build
+npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+npm start
 
-## Running unit tests
+Para acessar a aplicacao em http://localhost:4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Rodando os testes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+para executar os testes 
 
-## Further help
+npm run test
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
