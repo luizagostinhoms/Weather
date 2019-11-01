@@ -22,9 +22,6 @@ export class OpenWeatherMapService {
                         const info: any = res;
                         observer.next(info);
                         observer.complete();
-                    },
-                    err => {
-                        return {};
                     }
                 );
             

@@ -17,10 +17,15 @@ export class WeatherComponent implements OnInit {
 
   @Input() cityRquest: CityRequestWeather;
   city: CityWeather = new CityWeather();
+  showLoader: boolean = false;
+  showError: boolean = false;
   
   constructor(private openWeatherMapService: OpenWeatherMapService, private config: ConfigService) {}
 
   ngOnInit() {
+
+    this.city.cityName = this.cityRquest.cityName;
+    this.city.countryName = this.cityRquest.countryName;
 
     this.getInfoWeatherService(this.cityRquest.cityName, this.cityRquest.countryName); //first req.
     this.intervalNextUdpate();
@@ -36,12 +41,24 @@ export class WeatherComponent implements OnInit {
     });
   }
 
+  newTryCallService() {
+    this.getInfoWeatherService(this.cityRquest.cityName, this.cityRquest.countryName);
+  }
+
   getInfoWeatherService(cityName: string, countryName: string){
+    
+    this.showLoader = true;
+    this.showError = false;
+
     this.openWeatherMapService.getWeatherCity(cityName, countryName).subscribe(
       data => {
+        this.showLoader = false;
+        this.showError = false;
         this.treatResult(data as ResponseWeather);
       },
       (err: HttpErrorResponse) => {
+        this.showLoader = false;
+        this.showError = true;
       }
     );
   }
